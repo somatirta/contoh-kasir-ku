@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="id">
 <head>
 <meta charset="UTF-8" />
@@ -71,11 +70,12 @@
   /* Layout container */
   main {
     flex-grow: 1;
-    max-width: 1200px;
     margin: 24px auto 48px;
-    padding: 0 24px;
+    padding: 0 16px;
+    max-width: 100%;
     display: flex;
     flex-direction: column;
+    gap: 24px;
   }
 
   /* Sub-header inside content for page navigation */
@@ -84,12 +84,16 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 12px;
   }
   .subpage-header h2 {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     border-bottom: 2px solid #7f69f9;
     padding-bottom: 6px;
     font-weight: 700;
+    flex: 1 1 auto;
+    min-width: 180px;
   }
   button.back-btn {
     background-image: linear-gradient(135deg, #7f69f9, #4e39ad);
@@ -97,11 +101,13 @@
     color: white;
     font-weight: 700;
     font-size: 1rem;
-    padding: 8px 20px;
+    padding: 10px 24px;
     border-radius: 12px;
     cursor: pointer;
     transition: background-image 0.3s ease, transform 0.3s ease;
     text-shadow: 0 0 2px rgba(0,0,0,0.7);
+    min-width: 120px;
+    flex-shrink: 0;
   }
   button.back-btn:hover, button.back-btn:focus-visible {
     background-image: linear-gradient(135deg, #4e39ad, #7f69f9);
@@ -131,6 +137,7 @@
     width: 100%;
     transition: box-shadow 0.3s ease;
     text-shadow: 0 0 1px rgba(0,0,0,0.7);
+    max-width: 320px;
   }
   .search-container input[type="text"]:focus {
     outline: none;
@@ -154,6 +161,7 @@
     box-shadow: 0 8px 20px rgb(80 72 161 / 0.5);
     color: #ffffff;
     text-shadow: 0 0 2px rgba(0,0,0,0.8);
+    overflow-x: auto;
   }
 
   /* Forms */
@@ -162,6 +170,7 @@
     flex-wrap: wrap;
     gap: 16px;
     margin-bottom: 24px;
+    align-items: center;
   }
   label {
     flex: 1 1 100%;
@@ -182,6 +191,7 @@
     color: #eaeaea;
     transition: box-shadow 0.3s ease;
     text-shadow: 0 0 1px rgba(0,0,0,0.7);
+    min-width: 0;
   }
   input[type="text"]:focus,
   input[type="number"]:focus,
@@ -202,6 +212,7 @@
     padding: 12px 32px;
     transition: background-image 0.3s ease, transform 0.3s ease;
     text-shadow: 0 0 2px rgba(0,0,0,0.8);
+    min-width: 140px;
   }
   button:hover, button:focus-visible {
     background-image: linear-gradient(135deg, #4e39ad, #7f69f9);
@@ -220,6 +231,7 @@
   table {
     width: 100%;
     border-collapse: collapse;
+    min-width: 600px;
   }
   th, td {
     text-align: left;
@@ -275,6 +287,11 @@
     margin-bottom: 24px;
     border-radius: 12px;
     border: 1px solid #5555cc;
+  }
+  .cart-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 500px;
   }
   .cart-table th,
   .cart-table td {
@@ -430,6 +447,131 @@
     padding: 40px 0;
     font-size: 1rem;
     color: #aaa;
+  }
+
+  /* Responsive Styles */
+  @media (max-width: 640px) {
+    main {
+      padding: 0 12px;
+      margin: 16px auto 40px;
+    }
+    .header-title {
+      font-size: 1.25rem;
+    }
+    button.icon-btn {
+      font-size: 24px;
+      padding: 4px;
+    }
+    form {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 12px;
+    }
+    form > label {
+      margin-bottom: 4px;
+    }
+    form > *:not(button) {
+      flex: 1 1 100%;
+      min-width: auto;
+    }
+    form button {
+      min-width: 100%;
+      padding: 14px;
+      font-size: 1rem;
+    }
+    .subpage-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 8px;
+    }
+    .subpage-header h2 {
+      font-size: 1.25rem;
+    }
+    .inventory-list {
+      max-height: 280px;
+      border-radius: 12px;
+    }
+    table {
+      min-width: 600px;
+    }
+    .checkout-cart {
+      max-height: 220px;
+    }
+  }
+
+  @media (min-width: 641px) and (max-width: 1024px) {
+    main {
+      max-width: 720px;
+      padding: 0 24px;
+      margin: 24px auto 40px;
+    }
+    .header-title {
+      font-size: 1.3rem;
+    }
+    form {
+      flex-wrap: wrap;
+      gap: 16px;
+      align-items: center;
+    }
+    form > *:not(button) {
+      flex: 1 1 48%;
+      min-width: auto;
+    }
+    form > label {
+      margin-bottom: 4px;
+    }
+    form button {
+      flex: 1 1 100%;
+      min-width: auto;
+      padding: 12px 24px;
+      font-size: 1.05rem;
+    }
+    .subpage-header {
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .inventory-list {
+      max-height: 320px;
+    }
+    table {
+      min-width: 720px;
+    }
+    .checkout-cart {
+      max-height: 260px;
+    }
+  }
+
+  @media (min-width: 1025px) {
+    main {
+      max-width: 1200px;
+      padding: 0 24px;
+      margin: 24px auto 48px;
+    }
+    .header-title {
+      font-size: 1.5rem;
+    }
+    form {
+      flex-wrap: nowrap;
+      gap: 12px;
+    }
+    form > *:not(button) {
+      flex: initial;
+      min-width: 180px;
+    }
+    form button {
+      min-width: 140px;
+      padding: 12px 32px;
+      font-size: 1.05rem;
+    }
+    .inventory-list {
+      max-height: 380px;
+    }
+    table {
+      min-width: 100%;
+    }
+    .checkout-cart {
+      max-height: 300px;
+    }
   }
 </style>
 </head>
