@@ -226,8 +226,8 @@
     padding: 12px 16px;
     border-bottom: 1px solid #444;
     font-size: 0.95rem;
-    color: #eaeaea;
-    text-shadow: 0 0 2px rgba(0, 0, 0, 0.8);
+    color: #000000; /* Warna font hitam */
+    text-shadow: none; /* Hapus bayangan */
   }
   th {
     background-color: #3a3790;
@@ -237,6 +237,12 @@
   tbody tr:hover {
     background-color: #4b4b8fcc;
   }
+  /* Khusus kolom Nama Barang agar pasti warna hitam dan tanpa bayangan */
+  .inventory-list table tbody tr td:first-child {
+    color: #000000;
+    text-shadow: none;
+  }
+
   .btn-small {
     padding: 6px 12px;
     font-size: 0.85rem;
