@@ -1,5 +1,3 @@
-`web-kasir-kontras.html`
-```html
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -985,4 +983,3 @@
 </body>
 </html>
 
-```
