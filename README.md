@@ -1,3 +1,5 @@
+`web-kasir-kontras.html`
+```html
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -36,6 +38,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
   }
   .header-title {
     font-weight: 700;
@@ -146,6 +149,7 @@
     border-radius: 16px;
     padding: 24px;
     box-shadow: 0 8px 20px rgb(80 72 161 / 0.5);
+    color: #ffffff;
   }
 
   /* Forms */
@@ -214,6 +218,8 @@
     padding: 12px 16px;
     border-bottom: 1px solid #444;
     font-size: 0.95rem;
+    color: #eaeaea;
+    text-shadow: 0 0 2px rgba(0, 0, 0, 0.8);
   }
   th {
     background-color: #3a3790;
@@ -226,6 +232,8 @@
     font-size: 0.85rem;
     background-image: linear-gradient(135deg, #ff5555, #bb2b2b);
     user-select: none;
+    color: white;
+    text-shadow: 0 0 1px rgba(0,0,0,0.6);
   }
   .btn-small:hover, .btn-small:focus-visible {
     background-image: linear-gradient(135deg, #bb2b2b, #ff5555);
@@ -237,6 +245,8 @@
   }
   .btn-history {
     background-image: linear-gradient(135deg, #4e90f9, #2b52bb);
+    color: white;
+    text-shadow: 0 0 1px rgba(0,0,0,0.6);
   }
   .btn-history:hover, .btn-history:focus-visible {
     background-image: linear-gradient(135deg, #2b52bb, #4e90f9);
@@ -254,6 +264,8 @@
   .cart-table td {
     padding: 10px 14px;
     font-size: 0.95rem;
+    color: #eaeaea;
+    text-shadow: 0 0 2px rgba(0, 0, 0, 0.8);
   }
   .total-summary {
     font-size: 1.3rem;
@@ -261,6 +273,7 @@
     text-align: right;
     margin-top: 12px;
     color: #9a98ff;
+    text-shadow: 0 0 3px rgba(0,0,0,0.7);
   }
   .empty-message {
     font-size: 0.9rem;
@@ -292,6 +305,7 @@
     cursor: pointer;
     border: none;
     color: white;
+    text-shadow: 0 0 1px rgba(0,0,0,0.6);
   }
   .remove-item-btn:hover, .remove-item-btn:focus-visible {
     background-image: linear-gradient(135deg, #bb2b2b, #ff5555);
@@ -333,6 +347,8 @@
     padding: 24px 32px 32px;
     box-shadow: 0 12px 30px rgb(80 72 161 / 0.8);
     position: relative;
+    color: #eaeaea;
+    text-shadow: 0 0 2px rgba(0, 0, 0, 0.8);
   }
   .modal-header {
     display: flex;
@@ -372,6 +388,8 @@
     border-bottom: 1px solid #555;
     text-align: left;
     font-size: 0.95rem;
+    color: #eaeaea;
+    text-shadow: 0 0 2px rgba(0, 0, 0, 0.8);
   }
   .history-table th {
     background-color: #3a3790;
@@ -525,7 +543,7 @@
   </div>
 </div>
 
-<footer aria-label="Site footer">
+<footer aria-label="Site footer" style="background-color: rgba(30, 30, 50, 0.95); color: #f0f0f0; padding: 12px 24px; text-align: center; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);">
   &copy; 2024 Web Kasir &amp; Inventory Control - All rights reserved
 </footer>
 
@@ -967,3 +985,4 @@
 </body>
 </html>
 
+```
